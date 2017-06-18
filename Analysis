@@ -1,0 +1,41 @@
+Components:
+
+Main:
+
+1. ContactList
+2. ContactDetails
+3. ContactAdd
+
+
+Reusable
+
+1. ContactListInfo
+2. FormField - icon and text field
+
+
+Non functional requirements
+
+1. Cache - list of contacts
+    - Cache update on editing a contact - favorite state, edit other fields
+    - Addition of new contact, invalidate the cache
+
+2. show a non-cancellable progress bar with message “Please wait” - when contacts are loaded for the first time
+3. On Network Error, show an Alert Dialog with Title and Message “Network Error”, “Unable to contact the server” respectively
+4. If there are no contacts on server, display a message “No Contacts Found” instead of the empty list page
+
+
+Other functionalities:
+
+1. Invoke call and Text intent
+2. Menu action - share contact in Text
+3. On Long tap - the item should be copied and a message displayed
+4. Create new contact -
+    Validation
+5. Edit contact
+6. Show contacts
+7. Mark a contact as favorite
+8. There is no delete option here
+
+Web APIs
+
+1. Upload Photo and share the URL in new contact or edit contact call
