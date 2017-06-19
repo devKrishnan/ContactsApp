@@ -18,7 +18,7 @@ import { connect } from 'react-redux'
 const width = Dimensions.get('window')
 
 const handleSelection = (contactInfo, index) => {}
-const handleAddContact = () => {alert('ADD NEW CONTACT')}
+const handleAddContact = () => { Actions.contactNew() }
 const renderRow = (member, section, index) => {
   return (
     <ContactSummary
@@ -29,9 +29,8 @@ const renderRow = (member, section, index) => {
   )
 }
 
-const ContactList = (props) =>{
-  const dataSource1 = new ListView.DataSource({ rowHasChanged: (oldRow, newRow) => oldRow !== newRow })
-  const dataSource = dataSource1.cloneWithRows(props.contacts)
+const ContactList = (props) => {
+  const dataSource = new ListView.DataSource({ rowHasChanged: (oldRow, newRow) => oldRow !== newRow }).cloneWithRows(props.contacts)
   return (
     <View style={ styles.container }>
       <ListView
