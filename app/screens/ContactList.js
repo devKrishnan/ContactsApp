@@ -7,6 +7,7 @@ import {
 	ListView,
 	StyleSheet,
 	Text,
+	TouchableOpacity,
 	View,
 } from 'react-native'
 import colors from './../utils/colors'
@@ -16,7 +17,8 @@ import { connect } from 'react-redux'
 
 const width = Dimensions.get('window')
 
-const handleSelection = (member, index) => {}
+const handleSelection = (contactInfo, index) => {}
+const handleAddContact = () => {alert('ADD NEW CONTACT')}
 const renderRow = (member, section, index) => {
   return (
     <ContactSummary
@@ -36,9 +38,11 @@ const ContactList = (props) =>{
         dataSource={ dataSource }
         renderRow={ renderRow }
       />
-			<View style={ styles.addContactContainer }>
-				<Image/>
-			</View>
+			<TouchableOpacity underlayColor="transparent" onPress={ handleAddContact }>
+				<View style={ styles.addContactContainer }>
+					<Image source={ { uri: 'ic_add_contacts' } } style={ styles.addContactIcon } />
+				</View>
+			</TouchableOpacity>
     </View>)
 }
 const styles = StyleSheet.create({
@@ -47,12 +51,18 @@ const styles = StyleSheet.create({
     marginTop: 64
 	},
 	addContactContainer: {
-		backgroundColor: 'red',
 		marginBottom: 10,
 		marginLeft: 360,
 		height: 44,
 		width: 44,
+		alignItems: 'center',
+		justifyContent: 'center'
 	},
+	addContactIcon: {
+		width: 44,
+		height: 44,
+		tintColor: 'red'
+	}
 })
 
 function mapStateToProps (state) {
