@@ -55,12 +55,13 @@ const styles = StyleSheet.create({
 		height: 44,
 		width: 44,
 		alignItems: 'center',
-		justifyContent: 'center'
+		justifyContent: 'center',
+		backgroundColor: colors.greenColor,
+		borderRadius: 22,
 	},
 	addContactIcon: {
-		width: 44,
-		height: 44,
-		tintColor: 'red'
+		width: 25,
+		height: 25,
 	}
 })
 

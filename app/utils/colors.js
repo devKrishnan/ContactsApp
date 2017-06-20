@@ -3,5 +3,7 @@ module.exports = {
   'white': '#FFFFFF',
   'black_solid': '#000000',
   'black_light': 'rgba(191,192,198,0.38)',
-  'defaultPersonBackgroundColor': '#607D8B'
+  'defaultPersonBackgroundColor': '#607D8B',
+  'blueColor': '#1689CE',
+  'greenColor': '#8CC152'
 }
